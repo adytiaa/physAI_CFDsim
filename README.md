@@ -1,14 +1,14 @@
 # Physics-Informed Neural Network (PINN) CFD Simulation and Validation — NACA0012 Airfoil
 
 This project demonstrates how to use a **Physics-Informed Neural Network (PINN)** to simulate **compressible, viscous Navier–Stokes flow** over a **NACA0012 airfoil** at **Mach ≈ 1.2**.  
-It integrates **NVIDIA PhysicsNeMo** (when available) with a **PyTorch-based fallback** and an **AI Validation Agent** that automatically checks mass conservation, boundary conditions, and lift/drag accuracy.
+
+It integrates **NVIDIA PhysicsNeMo** and cüstomaised **PyTorch-based fallback** and an **AI Validation Agent** that automatically checks mass conservation, boundary conditions, and lift/drag accuracy.
 
 ---
 
 ## 🚀 Overview
 
-The notebook [`integrated_pinn_with_validator_colab_pdf_final.ipynb`](./integrated_pinn_with_validator_colab_pdf_final.ipynb)
-contains a complete workflow for:
+The notebook contains a complete workflow for:
 
 1. Generating the **NACA0012 geometry** and simulation grid.
 2. Defining and training a **PINN** to solve the **compressible Navier–Stokes equations**.
@@ -110,7 +110,8 @@ Each PDF includes:
 ## 🧩 Directory Structure
 
 ```
-├── integrated_pinn_with_validator_colab_pdf_final.ipynb
+├── CFD_validator.ipynb
+|-- Integrated_PINN_CFD.ipynb 
 ├── README.md
 ├── ckpts/
 │   ├── ckpt_epoch_100.pth
@@ -128,7 +129,7 @@ You can extend or modify this notebook to:
 - Add viscous wall models or turbulence closures
 - Export ONNX models for real-time surrogate inference
 - Add uncertainty quantification (UQ) or autoencoder-based anomaly detection
-- Connect to **NVIDIA Modulus** or **Omniverse Blueprints**
+- Connect to **NVIDIA PhysicsNemo** or **Omniverse Blueprints**
 
 ---
 
@@ -155,4 +156,4 @@ https://developer.nvidia.com/physicsnemo
 ## 🧭 License
 
 This repository is open for research and educational use.  
-© 2025, Generated with GPT-5 + NVIDIA PhysicsNeMo integration template.
+© 2025
