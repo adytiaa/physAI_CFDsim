@@ -8,10 +8,10 @@ It integrates **NVIDIA PhysicsNeMo** and cüstomaised **PyTorch-based fallback**
 
 ## 🚀 Overview
 
-The rep contains workflow for:
+The repo contains workflow for:
 
 1. Generating the **NACA0012 geometry** and simulation grid.
-2. Defining and training a **PINN** to solve the **compressible Navier–Stokes equations**.
+2. Defining and training a **Physics-Based model** to solve the **compressible Navier–Stokes equations**.
 3. Using **PhysicsNeMo** (if installed) for PDE residual computation.
 4. Running an integrated **Validator Agent** every 100 epochs:
    - Checks **mass conservation**.
@@ -97,28 +97,12 @@ The PDF includes:
 
 ## 📘 Proof of Simulation Report Example
 
-Each PDF includes:
-- Header: “CFD Validation Report — PINN NACA0012”
+Contains
 - Metadata (date/time, library versions)
 - Metrics table (mass residuals, Cl/Cd)
 - Plots:
   - Streamlines
   - Cp contour map
-
----
-
-## 🧩 Directory Structure
-
-```
-├── CFD_validator.ipynb
-|-- Integrated_PINN_CFD.ipynb 
-├── README.md
-├── ckpts/
-│   ├── ckpt_epoch_100.pth
-│   ├── ckpt_epoch_200.pth
-│   └── ...
-└── validation_report_epoch_*.pdf
-```
 
 ---
 
