@@ -2,13 +2,13 @@
 
 This project demonstrates how to use a **Physics-Informed Neural Network (PINN)** to simulate **compressible, viscous Navier–Stokes flow** over a **NACA0012 airfoil** at **Mach ≈ 1.2**.  
 
-It integrates **NVIDIA PhysicsNeMo** and cüstomaised **PyTorch-based fallback** and an **AI Validation Agent** that automatically checks mass conservation, boundary conditions, and lift/drag accuracy.
+It integrates **NVIDIA PhysicsNeMo** and cüstomaised **PyTorch-based fallback** and an **Validation** that automatically checks mass conservation, boundary conditions, and lift/drag accuracy.
 
 ---
 
 ## 🚀 Overview
 
-The notebook contains a complete workflow for:
+The rep contains workflow for:
 
 1. Generating the **NACA0012 geometry** and simulation grid.
 2. Defining and training a **PINN** to solve the **compressible Navier–Stokes equations**.
@@ -19,7 +19,7 @@ The notebook contains a complete workflow for:
    - Computes **Lift**, **Drag**, **Cl**, and **Cd**.
    - Produces a **PDF Proof of Simulation Report**.
 
-Each validation step also saves model checkpoints and plots streamlines and Cp contours.
+Each validation step also saves model checkpoints and plots streamlines and Cp contours. This automates the verification steps that are costly or subjective by computing the PDE residuals and check physics consistency, compare AI outputs to trusted solvers or learned surrogates, spot anomalies, outliers, or boundary-condition violations. In the end produce human-readable verdicts and evidence for on-chain contracts.
 
 ---
 
@@ -129,14 +129,14 @@ You can extend or modify this notebook to:
 - Add viscous wall models or turbulence closures
 - Export ONNX models for real-time surrogate inference
 - Add uncertainty quantification (UQ) or autoencoder-based anomaly detection
-- Connect to **NVIDIA PhysicsNemo** or **Omniverse Blueprints**
+- Connect to **NVIDIA PhysicsNemo** or **Omniverse**
 
 ---
 
 ## 🔐 Validation Provenance (Optional AI Proof)
 
 Each PDF is timestamped and includes environment hashes.
-You can extend it to:
+Extensions can be:
 - Add SHA256 model checkpoints
 - Include blockchain-style hash signatures for auditability
 - Store validation reports in Google Drive automatically
@@ -145,7 +145,7 @@ You can extend it to:
 
 ## 🏁 Citation
 
-If you use this workflow, please cite:
+please cite:
 ```
 NVIDIA PhysicsNeMo: Physics-Informed Neural Models for Simulation and Inference (2024)
 https://developer.nvidia.com/physicsnemo
@@ -154,6 +154,6 @@ https://developer.nvidia.com/physicsnemo
 ---
 
 ## 🧭 License
-
+MIT 
 This repository is open for research and educational use.  
 © 2025
